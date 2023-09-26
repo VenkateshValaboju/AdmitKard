@@ -11,7 +11,7 @@ Before running this API, make sure you have the following installed:
 1. Install the required dependencies:
 
    ```bash
-   npm install
+   npm install express cors
    ```
 
 ## Usage

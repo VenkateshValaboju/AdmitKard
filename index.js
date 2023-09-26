@@ -14,7 +14,6 @@ app.post("/get-otp", (request, response) => {
   otp = Math.floor(1000 + Math.random() * 9000).toString();
   response.send(otp);
 });
-app.listen(port);
 
 app.post("/verify-otp", (request, response) => {
   const { enteredOTP } = request.body;
@@ -24,3 +23,5 @@ app.post("/verify-otp", (request, response) => {
     response.status(400).send("Incorrect");
   }
 });
+
+app.listen(port);

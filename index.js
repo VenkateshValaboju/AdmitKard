@@ -6,6 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 let otp = "";
+const port = process.env.PORT || 3001;
 
 app.post("/get-otp", (request, response) => {
   const { mobileNumber } = request.body;
@@ -13,7 +14,7 @@ app.post("/get-otp", (request, response) => {
   otp = Math.floor(1000 + Math.random() * 9000).toString();
   response.send(otp);
 });
-app.listen(3001);
+app.listen(port);
 
 app.post("/verify-otp", (request, response) => {
   const { enteredOTP } = request.body;
